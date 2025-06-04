@@ -16,6 +16,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collections;
 
+// Filtro de autenticação que valida o token JWT presente no header Authorization das requisições.
+// Se o token for válido, autentica o usuário no contexto do Spring Security para permitir acesso aos endpoints protegidos.
+// O segredo da assinatura deve ser o mesmo usado para emitir o token na Auth API.
+
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 

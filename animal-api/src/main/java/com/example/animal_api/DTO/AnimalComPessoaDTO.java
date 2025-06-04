@@ -3,6 +3,7 @@ package com.example.animal_api.DTO;
 import com.example.animal_api.model.Animal;
 import com.example.animal_api.DTO.PessoaDTO; // vamos criar também!
 
+// DTO para representar um Animal junto com os dados da Pessoa associada
 public class AnimalComPessoaDTO {
 
     private String id;
@@ -15,6 +16,7 @@ public class AnimalComPessoaDTO {
 
     public AnimalComPessoaDTO() {}
 
+    // Construtor que recebe um Animal e uma PessoaDTO para construir o DTO combinado
     public AnimalComPessoaDTO(Animal animal, PessoaDTO pessoa) {
         this.id = animal.getId();
         this.nome = animal.getNome();
@@ -24,6 +26,7 @@ public class AnimalComPessoaDTO {
         this.pessoa = pessoa;
     }
 
+    // Getters e setters para todos os campos
     public String getId() {
         return id;
     }

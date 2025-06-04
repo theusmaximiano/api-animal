@@ -10,6 +10,11 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+// Configuração de segurança para a API de Animais.
+// Define que o endpoint de autenticação fica aberto (permitAll), o restante requer autenticação.
+// Registra o filtro JWT para validação dos tokens nas requisições.
+// CSRF desabilitado por ser uma API REST sem estado (stateless).
+
 @Configuration
 public class SecurityConfig {
 
